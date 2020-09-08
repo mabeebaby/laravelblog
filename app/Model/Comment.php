@@ -4,8 +4,8 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model {
-
+class Comment extends Model
+{
     protected $table = "comment";
     protected $primaryKey = "id";
 
@@ -25,5 +25,4 @@ class Comment extends Model {
 //    {
 //
 //    }
-
 }

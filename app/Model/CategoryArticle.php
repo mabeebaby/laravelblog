@@ -5,7 +5,6 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 
 class CategoryArticle extends Model {
-
     protected $table = "category_articles";
     protected $primaryKey = "id";
 
@@ -18,5 +17,4 @@ class CategoryArticle extends Model {
         "created_at",
         "updated_at"
     ];
-
 }

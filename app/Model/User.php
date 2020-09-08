@@ -2,11 +2,14 @@
 
 namespace App\Model;
 
+use App\Model\Comment;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticate;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+
+class User extends Authenticate implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -19,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'password',
+        'email', 'password'
     ];
 
     /**
@@ -36,10 +39,6 @@ class User extends Authenticatable
      *
      * @var array
      */
-//    protected $casts = [
-//        'email_verified_at' => 'datetime',
-//    ];
-
     protected $casts = [
         'id' => 'integer',
         'password' => 'string',
